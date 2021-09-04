@@ -1,0 +1,49 @@
+<!-- Application -->
+<div class="container-fluid">
+
+  <div class="row navbar">
+    <!-- Navbar -->
+    <ng-container *ngTemplateOutlet="navbar"></ng-container>
+  </div>
+
+  <div class="row body highlight-blue">
+    <!-- Body -->
+    <ng-container *ngTemplateOutlet="body"></ng-container>
+  </div>
+
+  <div class="row footer">
+    <!-- Footer -->
+    <ng-container *ngTemplateOutlet="footer"></ng-container> 
+  </div>
+  
+</div>
+
+<!-- Template -->
+<ng-template #navbar>
+  <app-navbar></app-navbar>
+</ng-template>
+
+<ng-template #body>
+  <h2>Title</h2>
+  <!-- Sidebar -->
+  <div class="col-sm-12 col-md-2 col-lg-1 row-no-padding">
+    <ng-container *ngTemplateOutlet="sidebar"></ng-container>
+  </div>
+
+  <!-- Catalog -->
+  <div class="col-sm-12 col-md-10 col-lg-11 row-no-padding">
+    <ng-container *ngTemplateOutlet="catalog"></ng-container>
+  </div>
+</ng-template>
+
+<ng-template #sidebar>
+  <app-sidebar></app-sidebar>
+</ng-template>
+
+<ng-template #catalog>
+  <app-catalog></app-catalog>
+</ng-template>
+
+<ng-template #footer>
+  <app-footer></app-footer>
+</ng-template>

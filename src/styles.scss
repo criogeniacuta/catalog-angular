@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+.highlight {
+    border:  solid 1px #ff2424;
+}
+
+.highlight-blue {
+    border:  solid 1px #4511ff;
+}
+
+.row-no-padding {
+    padding: 0;
+}
+
+
+/* Components */
+
+.sidebar, .catalog{
+    height: 100%;
+    padding: 8px;
+    margin: 0;
+}
