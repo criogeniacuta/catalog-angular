@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Dipendenze usate
+- Mock: faker (https://fakerjs.dev)
+- Toast: ngx-toastr (https://www.npmjs.com/package/ngx-toastr)
+- Traduzioni: ngx-translate (https://github.com/ngx-translate/core)
+    -- Comodo tutorial (https://www.codeandweb.com/babeledit/tutorials/how-to-translate-your-angular-app-with-ngx-translate)

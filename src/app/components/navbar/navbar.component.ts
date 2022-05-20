@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  products = [];
 
-  ngOnInit(): void {
-  }
+  constructor(private api_srv: ApiService,
+              private toast: ToastrService) { }
+
+  ngOnInit(): void {}
+
+  apiTest() {
+    this.api_srv.get('/products').subscribe(
+      data => {
+        this.toast.success('Chiamata andata a buon fine', 'Successo');
+        console.log(data);
+      },
+      error => {
+        const errorMessage = error.message;
+        this.toast.error(errorMessage, 'Errore', {
+          timeOut: 5000
+        });
+        console.error('Error:', errorMessage);
+      });
+    }
 
 }

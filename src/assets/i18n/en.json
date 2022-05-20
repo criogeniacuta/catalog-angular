@@ -1,0 +1,21 @@
+{
+    "catalog": {
+        "info":"Info",
+        "success":"Success",
+        "warning":"Warning",
+        "error":"Error",
+        "TITLE": "Catalogue",
+        "INFO": "Open Info Toast",
+        "SUCCESS": "Open Success Toast 2",
+        "SUCCESS2": "Open Alert Toast",
+        "WARNING": "Open Warning Toast",
+        "ERROR": "Open Error Toast",
+        "CANGE_LANGUAGE": "Cange Language",
+        "toast": {
+            "INFO": "Simple Info Toast",
+            "SUCCESS": "Text one",
+            "SUCCESS2": "Text two",
+            "ALERT": "There is something to check"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "catalog": {
+        "info":"Info",
+        "success":"Successo",
+        "warning":"Attenzione",
+        "error":"Errore",
+        "TITLE": "Catalogo",
+        "INFO": "Apri Toast Info",
+        "SUCCESS": "Apri Toast Successo",
+        "SUCCESS2": "Apri Toast Successo 2",
+        "WARNING": "Apri Toast Attenzione",
+        "ERROR": "Apri Toast Errore",
+        "CANGE_LANGUAGE": "Cambia Lingua",
+        "toast": {
+            "INFO": "Toast di Info Semplice",
+            "SUCCESS": "Testo uno",
+            "SUCCESS2": "Testo due",
+            "ALERT": "C'è qualcosa alla quale dovresti prestare attenzione"
+        }
+    }
+}
