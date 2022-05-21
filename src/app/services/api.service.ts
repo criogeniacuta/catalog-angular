@@ -15,7 +15,7 @@ export class ApiService {
    * @param params 
    */
   get(endpoint: string, params?: any) {
-    return this.http.get<Product[]>('http://localhost:3000' + endpoint);
+    return this.http.get<any[]>('http://localhost:3000' + endpoint);
   }
 
 }

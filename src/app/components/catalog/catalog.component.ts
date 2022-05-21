@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { TranslateService } from "@ngx-translate/core";
+import { LocaleService } from 'src/app/services/locale.service';
 
 @Component({
   selector: 'app-catalog',
@@ -9,28 +9,19 @@ import { TranslateService } from "@ngx-translate/core";
 })
 export class CatalogComponent implements OnInit {
 
-  public defaultLanguage = 'it'
-
   constructor(private toast: ToastrService,
-              private translate: TranslateService) {
-    translate.setDefaultLang(this.defaultLanguage);
-  }
+              private locale: LocaleService) {}
 
   ngOnInit(): void {}
 
-  switchLanguage() {
-    this.defaultLanguage === 'it'? this.defaultLanguage = 'en' : this.defaultLanguage = 'it'
-    this.translate.setDefaultLang(this.defaultLanguage);
-  }
-
   showInfo() {
     let title = '';
-    this.translate.get('catalog.info').subscribe((t: string) => {
+    this.locale.getTranslate().get('catalog.info').subscribe((t: string) => {
       title = t
     });
 
     let msg = '';
-    this.translate.get('catalog.toast.INFO').subscribe((t: string) => {
+    this.locale.getTranslate().get('catalog.toast.INFO').subscribe((t: string) => {
       msg = t;
     });
 
@@ -40,7 +31,7 @@ export class CatalogComponent implements OnInit {
 
   showSuccess(id: number) {
     let title = '';
-    this.translate.get('catalog.success').subscribe((t: string) => {
+    this.locale.getTranslate().get('catalog.success').subscribe((t: string) => {
       title = t
     });
 
@@ -48,12 +39,12 @@ export class CatalogComponent implements OnInit {
 
     switch (id) {
       case 1: {
-        this.translate.get('catalog.toast.SUCCESS').subscribe((t: string) => {
+        this.locale.getTranslate().get('catalog.toast.SUCCESS').subscribe((t: string) => {
           msg = t;
         }); break;
       }
       case 2:
-        this.translate.get('catalog.toast.SUCCESS2').subscribe((t: string) => {
+        this.locale.getTranslate().get('catalog.toast.SUCCESS2').subscribe((t: string) => {
           msg = t;
         }); break;
     }
@@ -63,12 +54,12 @@ export class CatalogComponent implements OnInit {
 
   showWarning() {
     let title = '';
-    this.translate.get('catalog.warning').subscribe((t: string) => {
+    this.locale.getTranslate().get('catalog.warning').subscribe((t: string) => {
       title = t
     });
 
     let msg = '';
-    this.translate.get('catalog.toast.ALERT').subscribe((t: string) => {
+    this.locale.getTranslate().get('catalog.toast.ALERT').subscribe((t: string) => {
       msg = t;
     });
 
@@ -77,7 +68,7 @@ export class CatalogComponent implements OnInit {
 
   showError() {
     let title = '';
-    this.translate.get('catalog.error').subscribe((t: string) => {
+    this.locale.getTranslate().get('catalog.error').subscribe((t: string) => {
       title = t
     });
 
@@ -86,4 +77,5 @@ export class CatalogComponent implements OnInit {
       extendedTimeOut: 500
     });
   }
+
 }

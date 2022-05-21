@@ -14,6 +14,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MaterialsComponent } from './components/materials/materials.component';
+import { Page404Component } from './components/page404/page404.component';
+import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,9 +25,13 @@ import { FooterComponent } from './components/footer/footer.component';
     NavbarComponent,
     SidebarComponent,
     CatalogComponent,
-    FooterComponent
+    FooterComponent,
+    MaterialsComponent,
+    Page404Component,
+    HomeComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,

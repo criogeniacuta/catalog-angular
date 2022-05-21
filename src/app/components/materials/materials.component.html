@@ -1,0 +1,86 @@
+<div class="materials">
+    <!-- Materials Filter -->
+    <div class="row materials-filter">
+        <div class="col-md-12">
+            <div class="accordion" id="materialsFilter">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            {{'materials.filter.SEARCH_FILTER' | translate }}
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#materialsFilter">
+                        <div class="accordion-body">
+                            <div class="serach-filter">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="mb-2">
+                                            <label for="materials-code" class="form-label">{{'materials.filter.CODE' | translate }}</label>
+                                            <input type="text" class="form-control" id="materials-code" [(ngModel)]="filter.code">
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="materials-type" class="form-label">{{'materials.filter.TYPE' | translate }}</label>
+                                            <input type="text" class="form-control" id="materials-type" [(ngModel)]="filter.type">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="mb-2">
+                                            <label for="materials-description" class="form-label">{{'materials.filter.DESCRIPTION' | translate }}</label>
+                                            <input type="text" class="form-control" id="materials-description" [(ngModel)]="filter.description">
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="color" class="form-label">{{'materials.filter.COLOR' | translate }}</label>
+                                            <input type="text" class="form-control" id="color" [(ngModel)]="filter.color">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="mb-2 form-check">
+                                            <input type="checkbox" class="form-check-input" id="check-hide_not-avbl" [(ngModel)]="filter.hide_not_avbl">
+                                            <label class="form-check-label" for="check-hide_not-avbl">{{'materials.filter.HIDE_NOT_AVAIL' | translate }}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row filter-btns">
+                                    <div class="col-xs-12">
+                                        <button class="btn btn-primary btn-filter" (click)="searchMaterials()">{{'common.SEARCH' | translate }}</button>
+                                        <button class="btn btn-d btn-secondary btn-filter btn-clear" (click)="clearFilter()">{{'common.CLEAR' | translate }}</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Materials List -->
+    <div class="row materials-list" *ngIf="initMaterials && !waitMaterials && materials.length > 0">
+        <div class="col-md-12">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">{{'materials.list.ID' | translate }}</th>
+                        <th scope="col">{{'materials.list.NAME' | translate }}</th>
+                        <th scope="col">{{'materials.list.DESCRIPTION' | translate }}</th>
+                        <th scope="col">{{'materials.list.PRICE' | translate }}</th>
+                        <th scope="col">{{'materials.list.QUANTITY' | translate }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let material of materials">
+                        <th scope="row">{{ material.id }}</th>
+                        <td>{{ material.name }}</td>
+                        <td>{{ material.description }}</td>
+                        <td>{{ material.price }}</td>
+                        <td>{{ material.quantity }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

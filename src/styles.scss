@@ -7,15 +7,33 @@
     border:  solid 1px #4511ff;
 }
 
-.row-no-padding {
-    padding: 0;
-}
+/****************
+*   Components  *   
+*****************/
 
-
-/* Components */
-
-.sidebar, .catalog{
+.sidebar, .home, .catalog, .materials, .page404 {
     height: 100%;
     padding: 8px;
     margin: 0;
+}
+
+/****************
+*      Rows     *   
+*****************/
+.row-no-padding {
+    padding: 0;
+}
+.filter-btns {
+    margin-top: 24px;
+}
+
+/****************
+*     Buttons    *   
+*****************/
+.btn-filter {
+    width: 100px;
+}
+
+.btn-filter.btn-clear {
+    margin-left: 12px;
 }

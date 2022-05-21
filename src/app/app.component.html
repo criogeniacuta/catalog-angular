@@ -6,7 +6,7 @@
     <ng-container *ngTemplateOutlet="navbar"></ng-container>
   </div>
 
-  <div class="row body highlight-blue">
+  <div class="row body">
     <!-- Body -->
     <ng-container *ngTemplateOutlet="body"></ng-container>
   </div>
@@ -24,7 +24,7 @@
 </ng-template>
 
 <ng-template #body>
-  <h2>Title</h2>
+ 
   <!-- Sidebar -->
   <div class="col-sm-12 col-md-2 col-lg-1 row-no-padding">
     <ng-container *ngTemplateOutlet="sidebar"></ng-container>
@@ -32,7 +32,8 @@
 
   <!-- Catalog -->
   <div class="col-sm-12 col-md-10 col-lg-11 row-no-padding">
-    <ng-container *ngTemplateOutlet="catalog"></ng-container>
+    <h2>Title</h2>
+    <router-outlet></router-outlet>
   </div>
 </ng-template>
 

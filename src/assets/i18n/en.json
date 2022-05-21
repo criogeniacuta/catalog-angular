@@ -1,4 +1,15 @@
 {
+    "common": {
+        "CLOSE": "Close",
+        "SEARCH": "Search",
+        "CLEAR": "Clear"
+    },
+    "navbar": {
+        "HOME": "Home",
+        "MATERIALS": "Materials",
+        "CATALOG": "Catalog",
+        "CHANGE_LANGUAGE": "Change Language"
+    },
     "catalog": {
         "info":"Info",
         "success":"Success",
@@ -16,6 +27,23 @@
             "SUCCESS": "Text one",
             "SUCCESS2": "Text two",
             "ALERT": "There is something to check"
+        }
+    },
+    "materials": {
+        "filter": {
+            "SEARCH_FILTER": "Search Filter",
+            "CODE": "Code",
+            "DESCRIPTION": "Description",
+            "TYPE": "Type",
+            "COLOR": "Color",
+            "HIDE_NOT_AVAIL": "Hide not available materials"
+        },
+        "list": {
+            "ID": "ID",
+            "NAME": "Name",
+            "DESCRIPTION": "Description",
+            "PRICE": "Price",
+            "QUANTITY": "Quantity"
         }
     }
 }
