@@ -1,3 +1,11 @@
 .materials-filter {
     margin-bottom: 50px;
 }
+
+.table-hover {
+    cursor: pointer;
+}
+
+.table-hover>tbody>tr:hover {
+    --bs-table-accent-bg: rgba(181, 198, 255, 0.3);
+}

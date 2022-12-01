@@ -19,6 +19,8 @@ import { Page404Component } from './components/page404/page404.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 
+import { NgxJsonViewerModule } from 'ngx-json-viewer';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +54,8 @@ import { HomeComponent } from './components/home/home.component';
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
       }
-  })
+  }),
+  NgxJsonViewerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
